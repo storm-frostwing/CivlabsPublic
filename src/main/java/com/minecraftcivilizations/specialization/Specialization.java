@@ -40,10 +40,12 @@ import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Difficulty;
 import org.bukkit.GameRule;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import minecraftcivilizations.com.minecraftCivilizationsCore.MinecraftCivilizationsCore;
 
 import java.util.*;
 import java.util.logging.Logger;
@@ -146,7 +148,7 @@ public final class Specialization extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PreJoinEventListener(), this);
         getServer().getPluginManager().registerEvents(new StonecutterListener(this), this);
         getServer().getPluginManager().registerEvents(new CraftingListener(this), this);
-        getServer().getPluginManager().registerEvents(new FurnaceListener(this), this);
+        getServer().getPluginManager().registerEvents(new FurnaceListener(), this);
         getServer().getPluginManager().registerEvents(new AutoCrafterListener(), this);
 
         new TownManager();
