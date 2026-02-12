@@ -73,7 +73,7 @@ shadowJar {
     archiveClassifier = ''
     archiveBaseName = project.name
 
-    configurations = [project.configurations.shadow]
+    configurations = [project.configurations.runtimeClasspath]
 
     relocate 'co.aikar.commands', 'com.minecraftcivilizations.specialization.acf'
     relocate 'co.aikar.locales', 'com.minecraftcivilizations.specialization.locales'
